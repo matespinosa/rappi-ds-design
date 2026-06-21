@@ -1,0 +1,36 @@
+{
+  "name": "design-system-rappi",
+  "private": true,
+  "scripts": {
+    "build": "pnpm metadata:validate && turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "storybook": "pnpm --filter=storybook storybook",
+    "design:lint": "design.md lint DESIGN.md",
+    "design:export": "design.md export --format css-tailwind DESIGN.md",
+    "design:diff": "design.md diff",
+    "metadata:build": "node scripts/build-metadata-index.mjs",
+    "metadata:validate": "node scripts/validate-metadata.mjs",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0",
+    "@google/design.md": "^0.3.0",
+    "prettier": "^3.5.3",
+    "turbo": "^2.5.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

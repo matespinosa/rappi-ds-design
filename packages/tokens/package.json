@@ -1,0 +1,67 @@
+{
+  "name": "@rappi-ds/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens for the Rappi Design System",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rappi/design-system-rappi.git",
+    "directory": "packages/tokens"
+  },
+  "homepage": "https://github.com/rappi/design-system-rappi#readme",
+  "bugs": {
+    "url": "https://github.com/rappi/design-system-rappi/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./base.css": "./src/themes/base.css",
+    "./fonts/pp-object-sans.css": "./src/fonts/pp-object-sans.css",
+    "./themes/food.css": "./src/themes/food.css",
+    "./themes/grocery.css": "./src/themes/grocery.css",
+    "./themes/pharmacy.css": "./src/themes/pharmacy.css",
+    "./themes/turbo.css": "./src/themes/turbo.css",
+    "./themes/fintech.css": "./src/themes/fintech.css",
+    "./themes/user-app.css": "./src/themes/user-app.css",
+    "./themes/rt-app.css": "./src/themes/rt-app.css",
+    "./themes/nitro.css": "./src/themes/nitro.css",
+    "./themes/consumer-cms.css": "./src/themes/consumer-cms.css",
+    "./themes/aliados.css": "./src/themes/aliados.css",
+    "./themes/portal-partners.css": "./src/themes/portal-partners.css",
+    "./themes/brands.css": "./src/themes/brands.css",
+    "./themes/mi-tienda.css": "./src/themes/mi-tienda.css",
+    "./themes/nexus.css": "./src/themes/nexus.css",
+    "./themes/marketing-suite.css": "./src/themes/marketing-suite.css",
+    "./themes/cargo.css": "./src/themes/cargo.css",
+    "./themes/pay.css": "./src/themes/pay.css",
+    "./tailwind": {
+      "types": "./dist/tailwind/preset.d.ts",
+      "import": "./dist/tailwind/preset.js",
+      "require": "./dist/tailwind/preset.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/themes",
+    "src/fonts"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,23 @@
+/*
+ * Nitro theme — Figma "semantics" file, mode "Nitro"
+ * Note: accent color is not explicitly set in Figma for this mode.
+ * --brand-primary inherits the Merchants (Rappi) default from :root.
+ */
+[data-theme='nitro'] {
+  --brand-primary-light: #e8e2fb;
+  --brand-primary-container: #e8e2fb;
+  --brand-secondary: transparent;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+  --offer: transparent;
+  --offer-container: transparent;
+
+  --ink-positive: #2caa4c;
+  --ink-error: #c43333;
+
+  --positive: #2caa4c;
+  --error: #c43333;
+  --border-error: #c43333;
+  --border-positive: #2caa4c;
+}

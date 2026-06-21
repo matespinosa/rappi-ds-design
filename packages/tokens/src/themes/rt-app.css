@@ -1,0 +1,27 @@
+/*
+ * RT App theme — Figma "semantics" file, mode "RT App"
+ * Accent: #16625e (dark teal)
+ */
+[data-theme='rt-app'] {
+  --brand-primary: #16625e;
+  --brand-primary-dark: #16625e;
+  --brand-primary-light: #dff4f3;
+  --brand-primary-container: #dff4f3;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+  --border-standard: #d6d9df;
+
+  --ink-positive: #258e3f;
+  --ink-disabled: rgba(145, 154, 170, 0.8);
+  --ink-error: #c43333;
+  --ink-warning: #ae5d00;
+
+  --positive: #258e3f;
+  --error: #c43333;
+  --warning: #ae5d00;
+  --offer-container: #fbdc25;
+
+  --border-error: #c43333;
+  --border-positive: #258e3f;
+}

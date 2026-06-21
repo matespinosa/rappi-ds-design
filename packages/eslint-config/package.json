@@ -1,0 +1,38 @@
+{
+  "name": "@rappi-ds/eslint-config",
+  "version": "0.1.0",
+  "description": "Shared ESLint configuration for the Rappi Design System",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rappi/design-system-rappi.git",
+    "directory": "packages/eslint-config"
+  },
+  "homepage": "https://github.com/rappi/design-system-rappi#readme",
+  "bugs": {
+    "url": "https://github.com/rappi/design-system-rappi/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./index.cjs",
+  "exports": {
+    ".": "./index.cjs",
+    "./react": "./react.cjs"
+  },
+  "files": ["index.cjs", "react.cjs"],
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0"
+  }
+}

@@ -1,0 +1,22 @@
+/*
+ * Marketing Suite theme — Figma "semantics" file, mode "Marketing Suite"
+ * Accent: #2ec4b6 (teal)
+ */
+[data-theme='marketing-suite'] {
+  --brand-primary: #2ec4b6;
+  --brand-primary-dark: #2ec4b6;
+  --brand-primary-light: #dff4f3;
+  --brand-primary-container: #dff4f3;
+  --brand-secondary: transparent;
+
+  --bg-accent-hover: #89d5d1;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+  --offer: transparent;
+  --offer-container: transparent;
+
+  --ink-positive: #34c85a;
+  --positive: #34c85a;
+  --border-positive: #34c85a;
+}

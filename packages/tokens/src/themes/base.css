@@ -1,0 +1,633 @@
+/*
+ * @rappi-ds/tokens — base.css
+ * Default token values (Merchants mode). Other modes override via [data-theme="..."].
+ * Source of truth: Figma file "semantics" (pgoeJOdI0goJC5nwxYlEi3), mode "Merchants".
+ */
+
+@import '../fonts/pp-object-sans.css';
+
+:root {
+  /* ─── Font family ─── */
+  --font-family-base: 'PP Object Sans', sans-serif;
+
+  /* ─── Brand / accent (Merchants default — override per mode) ─── */
+  --brand-primary: #ff441f;
+  --brand-primary-dark: #ff441f;
+  --brand-primary-light: #ffe3e3;
+  --brand-primary-container: #ffe3e3;
+  --brand-secondary: #fbdc25;
+  --brand-secondary-dark: #fbdc25;
+
+  /* ─── Background / surface ─── */
+  --surface: #ffffff; /* background/standard */
+  --surface-mild: #f7f8f9; /* background/mild */
+  --surface-weak: #d6d9df; /* background/weak */
+  --surface-inverse: #000000; /* background/inverse */
+  --surface-inverse-on: #000000; /* background/inverse-on */
+  --surface-overlay: rgba(0, 0, 0, 0.8); /* surface/overlay */
+  --surface-overlay-weak: rgba(255, 255, 255, 0.8); /* surface/overlay-weak */
+  --surface-disabled: #f7f8f9; /* background/disabled */
+  --surface-on-top: #ffffff; /* background/on-top */
+  --surface-accent-weak: #ffe3e3; /* background/accent-weak */
+
+  /* ─── Interactive states (background) ─── */
+  --surface-hover: #f7f8f9; /* interactive/bg-standard-hover */
+  --surface-pressed: #eceff3; /* interactive/bg-standard-pressed */
+  --surface-mild-hover: #eceff3; /* interactive/bg-mild-hover */
+  --surface-mild-pressed: #d6d9df; /* interactive/bg-mild-pressed */
+  --surface-weak-hover: #d6d9df; /* interactive/bg-weak-hover */
+  --surface-weak-pressed: #c8cdd5; /* interactive/bg-weak-pressed */
+  --surface-inverse-hover: #2f343c; /* interactive/bg-inverse-hover */
+  --surface-inverse-pressed: #464d59; /* interactive/bg-inverse-pressed */
+
+  /* ─── Ink (text / icons) ─── */
+  --ink-strong: #000000;
+  --ink-strong-on: #000000;
+  --ink-standard: #464d59;
+  --ink-weak: #919aaa;
+  --ink-disabled: rgba(145, 154, 170, 0.7); /* #919aaab2 */
+  --ink-inverse: #ffffff;
+  --ink-inverse-on: #ffffff;
+  --ink-accent: var(--brand-primary);
+  --ink-error: #ff4242;
+  --ink-warning: #da7400;
+  --ink-positive: #00a86c;
+  --ink-recommendation: #007aff;
+
+  /* ─── Interactive (accent elements) ─── */
+  --bg-accent: var(--brand-primary);
+  --bg-accent-hover: var(--brand-primary-dark);
+  --bg-accent-pressed: var(--brand-primary-dark);
+  --border-accent: var(--brand-primary);
+  --border-accent-focus: var(--brand-primary);
+  --border-focus: #171a1e;
+
+  /* ─── Feedback backgrounds ─── */
+  --positive: #00a86c;
+  --positive-container: #dff9ed; /* background/positive-weak */
+  --warning: #da7400;
+  --warning-container: #fcf0df; /* background/warning-weak */
+  --error: #ff4242;
+  --error-container: #ffe3e3; /* background/error-weak */
+  --info: #007aff; /* background/recommendation */
+  --info-container: #eff6fe; /* background/recommendation-weak */
+
+  /* ─── Offer / promotions ─── */
+  --offer: #fbdc25;
+  --offer-container: #fdfae3; /* background/offer-weak */
+
+  /* ─── Borders ─── */
+  --border-standard: #eceff3;
+  --border-strong: #171a1e;
+  --border-blank: #ffffff;
+  --border-block: #f7f8f9;
+  --border-non-opaque: rgba(145, 154, 170, 0.2); /* #919aaa33 */
+  --border-error: #ff4242;
+  --border-warning: #da7400;
+  --border-positive: #00a86c;
+
+  /* ─── Skeleton ─── */
+  --skeleton-weak: #f7f8f9;
+  --skeleton-standard: #eceff3;
+
+  /* ─── Programs ─── */
+  --programs-rappi: #ff441f;
+  --programs-turbo: #083410;
+
+  /* ─── Chart palette (Merchants — missing steps only; 01/03 covered by semantic tokens) ─── */
+  --chart-blue-02: #8dbbf9;
+  --chart-blue-04: #133469;
+  --chart-green-02: #a0eec8;
+  --chart-green-04: #177749;
+  --chart-red-02: #ff9797;
+  --chart-red-03: #c43333;
+  --chart-red-04: #8c2424;
+  --chart-orange-02: #ffbb6d;
+  --chart-orange-03: #fe8f10;
+  --chart-orange-04: #7a4100;
+  --chart-yellow-02: #f9eb8f;
+  --chart-teal-01: #dff4f3;
+  --chart-teal-02: #89d5d1;
+  --chart-teal-03: #28b2ab;
+  --chart-teal-04: #16625e;
+  --chart-purple-02: #aa95ef;
+  --chart-indigo-01: #d0d2f5;
+  --chart-indigo-02: #a8aceb;
+  --chart-indigo-03: #4b50a9;
+  --chart-indigo-04: #272a58;
+  --chart-magenta-01: #ffe5f0;
+  --chart-magenta-02: #ffa0c8;
+  --chart-magenta-03: #ff529a;
+  --chart-magenta-04: #8c2d55;
+
+  /* ─── Typography ─── */
+  --font-size-h1: 40px;
+  --font-weight-h1: 700;
+  --line-height-h1: 48px;
+
+  --font-size-h2: 32px;
+  --font-weight-h2: 700;
+  --line-height-h2: 40px;
+
+  --font-size-h3: 24px;
+  --font-weight-h3: 700;
+  --line-height-h3: 32px;
+
+  --font-size-h4: 20px;
+  --font-weight-h4: 700;
+  --line-height-h4: 26px;
+
+  --font-size-headline: 20px;
+  --font-weight-headline: 500;
+  --line-height-headline: 24px;
+
+  --font-size-body-lg: 16px;
+  --font-weight-body-lg: 400;
+  --line-height-body-lg: 24px;
+
+  --font-size-body-md: 14px;
+  --font-weight-body-md: 400;
+  --line-height-body-md: 20px;
+
+  --font-size-body-sm: 12px;
+  --font-weight-body-sm: 400;
+  --line-height-body-sm: 18px;
+
+  --font-size-label-lg: 16px;
+  --font-weight-label-lg: 500;
+  --line-height-label-lg: 24px;
+
+  --font-size-label-md: 14px;
+  --font-weight-label-md: 500;
+  --line-height-label-md: 20px;
+
+  --font-size-label-sm: 12px;
+  --font-weight-label-sm: 500;
+  --line-height-label-sm: 18px;
+
+  --font-size-label-xs: 10px;
+  --font-weight-label-xs: 500;
+  --line-height-label-xs: 14px;
+
+  --font-size-caption: 12px;
+  --font-weight-caption: 400;
+  --line-height-caption: 18px;
+
+  --font-size-caption-1: 14px;
+  --font-weight-caption-1: 400;
+  --line-height-caption-1: 16px;
+
+  --font-size-caption-2: 12px;
+  --font-weight-caption-2: 400;
+  --line-height-caption-2: 16px;
+
+  /* ─── Spacing ─── */
+  --spacing-2: 2px;
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-64: 64px;
+
+  /* ─── Border radius ─── */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-2xl: 18px;
+  --radius-full: 9999px;
+
+  /* ─── Elevation ─── */
+  --elevation-0: none;
+  --elevation-1: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --elevation-2: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --elevation-3: 0 8px 32px rgba(0, 0, 0, 0.16);
+
+  /* ─── Button ─── */
+  --button-height-xs: 26px;
+  --button-height-sm: 32px;
+  --button-height-md: 40px;
+  --button-height-lg: 48px;
+  --button-height-xl: 56px;
+
+  --icon-button-size-xs: 24px;
+  --icon-button-size-sm: 32px;
+  --icon-button-size-md: 40px;
+  --icon-button-size-lg: 48px;
+  --icon-button-size-xl: 56px;
+
+  --button-padding-inline-xs: var(--spacing-8);
+  --button-padding-inline-sm: var(--spacing-16);
+  --button-padding-inline-md: var(--spacing-16);
+  --button-padding-inline-lg: var(--spacing-24);
+  --button-padding-inline-xl: var(--spacing-28);
+
+  --button-icon-size-xs: 16px;
+  --button-icon-size-sm: 16px;
+  --button-icon-size-md: 20px;
+  --button-icon-size-lg: 24px;
+  --button-icon-size-xl: 24px;
+
+  --button-gap-xs: var(--spacing-4);
+  --button-gap-sm: var(--spacing-8);
+  --button-gap-md: var(--spacing-8);
+  --button-gap-lg: var(--spacing-12);
+  --button-gap-xl: var(--spacing-12);
+  --button-border-width: 1px;
+  --button-focus-width: 2px;
+  --button-spinner-width: 2px;
+  --button-pressed-overlay: rgba(70, 77, 89, 0.1);
+  --button-motion-duration: 150ms;
+  --button-spinner-duration: 700ms;
+  --button-motion-easing: ease;
+
+  /* ─── Chip ─── */
+  --chip-height-xs: 24px;
+  --chip-height-sm: 28px;
+  --chip-height-md: 32px;
+  --chip-height-lg: 36px;
+  --chip-height-xl: 40px;
+
+  --chip-padding-inline-xs: var(--spacing-8);
+  --chip-padding-inline-sm: var(--spacing-10);
+  --chip-padding-inline-md: var(--spacing-12);
+  --chip-padding-inline-lg: var(--spacing-16);
+  --chip-padding-inline-xl: var(--spacing-16);
+
+  --chip-icon-size-xs: 16px;
+  --chip-icon-size-sm: 16px;
+  --chip-icon-size-md: 16px;
+  --chip-icon-size-lg: 20px;
+  --chip-icon-size-xl: 20px;
+
+  --chip-gap-xs: var(--spacing-4);
+  --chip-gap-sm: var(--spacing-4);
+  --chip-gap-md: var(--spacing-6);
+  --chip-gap-lg: var(--spacing-6);
+  --chip-gap-xl: var(--spacing-8);
+
+  --chip-border-width: 1px;
+  --chip-shadow: 0px 6px 14px rgba(33, 34, 36, 0.08);
+
+  /* ─── Checkbox ─── */
+  --checkbox-size: 24px;
+  --checkbox-border-width: 1.5px;
+
+  /* ─── Radio ─── */
+  --radio-size: 24px;
+  --radio-indicator-size: 22px;
+  --radio-dot-size: 10px;
+  --radio-border-width: 2px;
+
+  /* ─── Text field ─── */
+  --text-field-height-sm: 44px;
+  --text-field-height-md: 56px;
+  --text-field-padding-inline: var(--spacing-16);
+  --text-field-gap: var(--spacing-6);
+  --text-field-border-width: 1px;
+  --text-field-radius: 16px;
+  --text-field-font-size-sm: var(--font-size-body-md);
+  --text-field-font-size-md: var(--font-size-body-lg);
+  --text-field-line-height-sm: 16px;
+  --text-field-line-height-md: 20px;
+  --text-field-label-size: var(--font-size-body-sm);
+  --text-field-label-line-height: 16px;
+  --text-field-helper-size: var(--font-size-label-xs);
+  --text-field-helper-line-height: 12px;
+  --text-field-adornment-size: 24px;
+  --text-field-skeleton-label-width: 146px;
+  --text-field-skeleton-helper-width: 87%;
+
+  /* ─── Text field phone ─── */
+  --text-field-phone-flag-size: 16px;
+  --text-field-phone-country-gap: var(--spacing-4);
+  --text-field-phone-chevron-size: 12px;
+  --text-field-phone-clear-size: 24px;
+
+  /* ─── Pin input ─── */
+  --pin-input-cell-size-4: 60px;
+  --pin-input-cell-size-6: 40px;
+  --pin-input-padding-inline: var(--spacing-32);
+  --pin-input-padding-block: var(--spacing-8);
+  --pin-input-cell-padding: var(--spacing-4);
+  --pin-input-border-width: 1px;
+  --pin-input-radius: var(--radius-full);
+
+  /* ─── Accordion ─── */
+  --accordion-radius: 20px;
+  --accordion-border-width: 1px;
+  --accordion-padding: var(--spacing-16);
+  --accordion-header-gap: var(--spacing-24);
+  --accordion-text-gap: var(--spacing-4);
+  --accordion-icon-size: 24px;
+  --accordion-chevron-size: 24px;
+  --accordion-chevron-icon-size: 16px;
+  --accordion-motion-duration: 280ms;
+  --accordion-motion-easing: ease;
+
+  /* ─── Tag ─── */
+  --tag-height-sm: 16px;
+  --tag-height-md: 24px;
+  --tag-padding-inline-sm: var(--spacing-6);
+  --tag-padding-block-sm: var(--spacing-2);
+  --tag-padding-inline-md: var(--spacing-8);
+  --tag-padding-block-md: var(--spacing-4);
+  --tag-icon-size-sm: 12px;
+  --tag-icon-size-md: 16px;
+  --tag-gap-sm: var(--spacing-2);
+  --tag-gap-md: var(--spacing-4);
+  --tag-font-size-sm: var(--font-size-label-xs); /* 10px */
+  --tag-font-size-md: var(--font-size-label-sm); /* 12px */
+  --tag-border-width: 1px;
+
+  /* suggestion palette (yellow/gold — distinct from brand yellow) */
+  --tag-suggestion-pastel: #fdfae3;
+  --tag-suggestion-solid: #d7bd3f;
+  --tag-suggestion-text: #625618;
+
+  /* AI palette (purple) */
+  --tag-ai-pastel: #e8e2fb;
+  --tag-ai-solid: #4d2fae;
+  --tag-ai-text: #37227c;
+
+  /* ─── Search ─── */
+  --search-radius: var(--radius-full);
+  --search-border-width: 1px;
+  --search-gap: var(--spacing-8);
+  --search-icon-size: 24px;
+  --search-back-pill-size: 32px;
+  --search-clear-size: 24px;
+  --search-clear-icon-size: 16px;
+  --search-font-size: var(--font-size-body-md);
+  --search-line-height: var(--line-height-body-md);
+  --search-motion-duration: 150ms;
+  --search-motion-easing: ease;
+
+  /* ─── Tooltip ─── */
+  --tooltip-radius: 20px; /* same as Accordion */
+  --tooltip-padding: var(--spacing-16);
+  --tooltip-content-gap: var(--spacing-12);
+  --tooltip-max-width: 327px;
+  --tooltip-min-width: 100px;
+  --tooltip-font-size: var(--font-size-body-md); /* caption-1 = 14px */
+  --tooltip-font-weight: var(--font-weight-label-md); /* medium = 500 */
+  --tooltip-line-height: var(--line-height-body-md);
+  --tooltip-icon-size: 40px;
+  --tooltip-close-size: 24px;
+  --tooltip-arrow-size: 12px;
+  --tooltip-arrow-offset: 20px; /* horizontal offset from edge */
+
+  /* ─── Uploader ─── */
+  --uploader-radius: 12px;
+  --uploader-border-width: 1px;
+  --uploader-padding: var(--spacing-16);
+  --uploader-gap-sm: var(--spacing-12);
+  --uploader-gap-lg: var(--spacing-16);
+  --uploader-height-sm: 80px;
+  --uploader-icon-size-sm: 24px;
+  --uploader-icon-size-lg: 40px;
+  --uploader-thumbnail-size: 32px;
+  --uploader-thumbnail-radius: var(--radius-md);
+  --uploader-progress-height: 6px;
+  --uploader-progress-radius: var(--radius-full);
+  --uploader-font-size-title: var(--font-size-label-md);
+  --uploader-font-weight-title: var(--font-weight-label-md);
+  --uploader-line-height-title: var(--line-height-label-md);
+  --uploader-font-size-subtitle: var(--font-size-label-sm);
+  --uploader-font-weight-subtitle: var(--font-weight-body-sm);
+  --uploader-line-height-subtitle: var(--line-height-label-sm);
+  --uploader-action-size: 24px;
+  --uploader-motion-spin-duration: 700ms;
+
+  /* ─── Snackbar ─── */
+  --snackbar-radius: 24px; /* Figma --card = 24px */
+  --snackbar-padding: var(--spacing-16);
+  --snackbar-gap: var(--spacing-8);
+  --snackbar-font-size: var(--font-size-body-md); /* caption-1 = 14px */
+  --snackbar-line-height: var(--line-height-body-md);
+  --snackbar-icon-size: 24px;
+  --snackbar-avatar-size: 40px;
+  --snackbar-avatar-radius: 12px; /* Figma --radius/sm = 12px */
+  --snackbar-spinner-size: 32px;
+  --snackbar-spinner-border: 2.5px;
+  --snackbar-close-size: 24px;
+  --snackbar-action-font-size: var(--font-size-body-sm); /* caption-2 = 12px */
+  --snackbar-action-font-weight: var(--font-weight-label-sm); /* 500 = medium */
+  --snackbar-action-line-height: var(--line-height-body-sm);
+  --snackbar-action-padding-inline: var(--spacing-8);
+  --snackbar-action-padding-block: var(--spacing-4);
+  --snackbar-motion-spin-duration: 700ms;
+
+  /* ─── Calendar ─── */
+  --calendar-radius: 24px;
+  --calendar-border-width: 1px;
+  --calendar-padding: var(--spacing-16);
+  --calendar-panel-width: 252px;
+  --calendar-cell-size: 36px;
+  --calendar-cell-radius: var(--radius-full);
+  --calendar-header-height: 28px;
+  --calendar-nav-padding-block: var(--spacing-8);
+  --calendar-nav-padding-inline: var(--spacing-4);
+  --calendar-month-gap: var(--spacing-4);
+  --calendar-panel-gap: var(--spacing-16);
+  --calendar-font-size-month: var(--font-size-label-lg);
+  --calendar-font-weight-month: var(--font-weight-label-lg);
+  --calendar-line-height-month: var(--line-height-label-lg);
+  --calendar-font-size-header: var(--font-size-label-md);
+  --calendar-font-weight-header: var(--font-weight-label-md);
+  --calendar-line-height-header: var(--line-height-label-md);
+  --calendar-font-size-day: var(--font-size-label-sm);
+  --calendar-font-weight-day: var(--font-weight-label-md);
+  --calendar-line-height-day: var(--line-height-label-sm);
+  --calendar-nav-icon-size: 24px;
+  --calendar-footer-gap: var(--spacing-8);
+
+  /* ─── Badge live ─── */
+  --badge-live-size: 16px;
+  --badge-live-dot-size: 8px;
+  --badge-live-dot-size-animated: 12px;
+  --badge-live-animation-duration: 1.5s;
+  --badge-live-animation-easing: ease-in-out;
+
+  /* ─── Badge number ─── */
+  --badge-number-size-xs: 16px;
+  --badge-number-size-sm: 20px;
+  --badge-number-size-md: 24px;
+  --badge-number-size-lg: 32px;
+  --badge-number-size-xl: 40px;
+  --badge-number-padding-inline: var(--spacing-4);
+  --badge-number-font-size-xs: var(--font-size-label-xs);
+  --badge-number-font-size-sm: var(--font-size-label-xs);
+  --badge-number-font-size-md: var(--font-size-label-sm);
+  --badge-number-font-size-lg: var(--font-size-label-lg);
+  --badge-number-font-size-xl: var(--font-size-h4);
+  --badge-number-line-height-xs: 12px;
+  --badge-number-line-height-sm: 12px;
+  --badge-number-line-height-md: 16px;
+  --badge-number-line-height-lg: 20px;
+  --badge-number-line-height-xl: var(--line-height-label-lg);
+
+  /* ─── Dialog ─── */
+  --dialog-radius: 20px;
+  --dialog-border-width: 1px;
+  --dialog-padding: var(--spacing-24);
+  --dialog-gap: 20px;
+  --dialog-header-gap: var(--spacing-8);
+  --dialog-body-gap: 10px;
+  --dialog-footer-gap: var(--spacing-12);
+  --dialog-max-width: 463px;
+  --dialog-shadow: 0 5px 10px rgba(33, 34, 36, 0.04);
+  --dialog-close-size: 32px;
+  --dialog-font-size-title: var(--font-size-h3);
+  --dialog-font-weight-title: var(--font-weight-label-lg);
+  --dialog-line-height-title: var(--line-height-h3);
+  --dialog-font-size-description: var(--font-size-body-md);
+  --dialog-font-weight-description: var(--font-weight-body-md);
+  --dialog-line-height-description: var(--line-height-body-md);
+  --dialog-motion-duration: 200ms;
+
+  /* ─── Bottom Sheet ─── */
+  --sheet-radius: 28px;
+  --sheet-padding-x: var(--spacing-24);
+  --sheet-header-pt: var(--spacing-24);
+  --sheet-header-pb: var(--spacing-16);
+  --sheet-footer-pt: var(--spacing-16);
+  --sheet-footer-pb: var(--spacing-24);
+  --sheet-footer-gap: var(--spacing-8);
+  --sheet-grabber-height: 4px;
+  --sheet-grabber-width: 36px;
+  --sheet-grabber-radius: 3px;
+  --sheet-grabber-py: var(--spacing-8);
+  --sheet-shadow: 0 -6px 14px rgba(0, 0, 0, 0.08);
+  --sheet-scrim-bg: rgba(0, 0, 0, 0.4);
+  --sheet-scrim-blur: 20px;
+  --sheet-font-size-title: var(--font-size-h3);
+  --sheet-font-weight-title: var(--font-weight-label-lg);
+  --sheet-line-height-title: var(--line-height-h3);
+  --sheet-motion-duration: 300ms;
+  --sheet-motion-easing: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* ─── Pagination ─── */
+  --pagination-gap: var(--spacing-8);
+  --pagination-item-size: 32px;
+  --pagination-item-radius: var(--radius-md);
+  --pagination-font-size: var(--font-size-label-md);
+  --pagination-font-weight: var(--font-weight-label-md);
+  --pagination-line-height: var(--line-height-label-md);
+  --pagination-nav-icon-size: 20px;
+
+  /* ─── Card ─── */
+  --card-radius: 20px;
+  --card-border-width: 1px;
+  --card-padding: var(--spacing-24);
+  --card-shadow-raised: 0 5px 10px rgba(33, 34, 36, 0.04);
+  --card-shadow-floating: 0 6px 14px rgba(33, 34, 36, 0.08);
+
+  /* ─── Drawer ─── */
+  --drawer-width-sm: 380px;
+  --drawer-width-md: 480px;
+  --drawer-width-lg: 640px;
+  --drawer-header-padding: var(--spacing-24);
+  --drawer-header-gap: var(--spacing-16);
+  --drawer-footer-padding-sm: var(--spacing-16) var(--spacing-24);
+  --drawer-footer-padding-md: var(--spacing-20) var(--spacing-24);
+  --drawer-footer-gap-sm: var(--spacing-8);
+  --drawer-footer-gap-md: var(--spacing-16);
+  --drawer-close-size: 24px;
+  --drawer-close-icon-size: 12px;
+  --drawer-scrim-bg: rgba(0, 0, 0, 0.32);
+  --drawer-shadow: var(--elevation-2);
+  --drawer-motion-duration: 300ms;
+  --drawer-motion-easing: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* ─── Data table ─── */
+  --table-surface: var(--surface);
+  --table-header-surface: var(--surface-mild);
+  --table-border-color: var(--border-standard);
+  --table-border-width: 1px;
+  --table-radius: 20px;
+  --table-header-min-height: 56px;
+  --table-row-min-height: 52px;
+  --table-selection-column-width: 56px;
+  --table-state-min-height: 180px;
+  --table-state-padding: var(--spacing-24);
+  --table-state-gap: var(--spacing-6);
+  --table-state-title-color: var(--ink-strong);
+  --table-state-description-color: var(--ink-standard);
+  --table-state-title-size: var(--font-size-body-lg);
+  --table-state-title-line-height: var(--line-height-body-lg);
+  --table-state-title-weight: var(--font-weight-label-md);
+  --table-state-description-size: var(--font-size-caption-2);
+  --table-state-description-line-height: var(--line-height-caption-2);
+  --table-pagination-margin-top: var(--spacing-16);
+  --table-mobile-gap: var(--spacing-12);
+  --table-skeleton-surface: var(--skeleton-standard);
+  --table-skeleton-radius: var(--radius-md);
+  --table-skeleton-row-height: 52px;
+  --table-skeleton-line-height: 12px;
+  --table-skeleton-line-width: 28%;
+
+  /* ─── Table cell ─── */
+  --table-cell-surface: var(--surface);
+  --table-cell-header-surface: var(--surface-mild);
+  --table-cell-border-color: var(--border-standard);
+  --table-cell-padding: var(--spacing-16);
+  --table-cell-gap: var(--spacing-6);
+  --table-cell-text-gap: var(--spacing-2);
+  --table-cell-color: var(--ink-standard);
+  --table-cell-title-color: var(--ink-strong);
+  --table-cell-font-size: var(--font-size-caption-1);
+  --table-cell-line-height: var(--line-height-caption-1);
+  --table-cell-font-weight: var(--font-weight-body-md);
+  --table-cell-title-font-weight: var(--font-weight-label-md);
+  --table-cell-header-font-weight: var(--font-weight-label-md);
+
+  /* ─── Card table ─── */
+  --card-table-surface: var(--surface);
+  --card-table-border-color: var(--border-non-opaque);
+  --card-table-border-width: 1px;
+  --card-table-radius: 16px;
+  --card-table-padding-inline: var(--spacing-16);
+  --card-table-padding-block-default: var(--spacing-12);
+  --card-table-padding-block-compact: 10px;
+  --card-table-gap-default: 14px;
+  --card-table-gap-compact: 10px;
+  --card-table-header-gap: var(--spacing-8);
+  --card-table-title-gap: var(--spacing-4);
+  --card-table-actions-gap: var(--spacing-8);
+  --card-table-status-gap: var(--spacing-6);
+  --card-table-field-column-gap: var(--spacing-16);
+  --card-table-field-row-gap: var(--spacing-10);
+  --card-table-field-text-gap: var(--spacing-2);
+  --card-table-title-color: var(--ink-strong);
+  --card-table-meta-color: var(--ink-standard);
+  --card-table-label-color: var(--ink-weak);
+  --card-table-value-color: var(--ink-standard);
+  --card-table-value-strong-color: var(--ink-strong);
+  --card-table-title-size: var(--font-size-body-lg);
+  --card-table-title-line-height: var(--line-height-body-lg);
+  --card-table-title-weight: var(--font-weight-label-md);
+  --card-table-meta-size: var(--font-size-caption-2);
+  --card-table-meta-line-height: var(--line-height-caption-2);
+  --card-table-label-size: var(--font-size-caption-2);
+  --card-table-label-line-height: var(--line-height-caption-2);
+  --card-table-value-size: var(--font-size-caption-1);
+  --card-table-value-line-height: var(--line-height-caption-1);
+  --card-table-value-strong-size: var(--font-size-body-lg);
+  --card-table-value-strong-line-height: var(--line-height-body-lg);
+  --card-table-value-strong-weight: var(--font-weight-label-md);
+}
+
+html,
+body {
+  font-family: var(--font-family-base);
+}

@@ -1,0 +1,46 @@
+{
+  "name": "@rappi-ds/icons",
+  "version": "0.1.0",
+  "description": "Icon library for the Rappi Design System",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rappi/design-system-rappi.git",
+    "directory": "packages/icons"
+  },
+  "homepage": "https://github.com/rappi/design-system-rappi#readme",
+  "bugs": {
+    "url": "https://github.com/rappi/design-system-rappi/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lucide-react": "^0.525.0"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.23",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  }
+}

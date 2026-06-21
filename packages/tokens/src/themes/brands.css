@@ -1,0 +1,31 @@
+/*
+ * Brands theme — Figma "semantics" file, mode "Brands"
+ * Accent: #4589ff (blue)
+ */
+[data-theme='brands'] {
+  --brand-primary: #4589ff;
+  --brand-primary-dark: #2c68d4;
+  --brand-primary-light: #eff6fe;
+  --brand-primary-container: #eff6fe;
+  --brand-secondary: transparent;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+  --surface-inverse: transparent;
+  --surface-overlay: rgba(0, 0, 0, 0.6);
+  --surface-overlay-weak: transparent;
+  --border-standard: #d6d9df;
+  --border-non-opaque: transparent;
+
+  --ink-error: #c43333;
+  --ink-warning: #fe8f10;
+  --ink-recommendation: #4d2fae;
+
+  --error: #c43333;
+  --info: #4d2fae;
+  --info-container: #e8e2fb;
+  --offer: transparent;
+  --offer-container: transparent;
+  --border-error: #c43333;
+  --border-positive: #258e3f;
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "1.0",
+  "generated": true,
+  "hierarchy": {
+    "primitive": [],
+    "composite": [
+      "CardTable",
+      "TableCell"
+    ],
+    "organism": [
+      "DataTable"
+    ]
+  },
+  "components": [
+    {
+      "name": "CardTable",
+      "category": "composite",
+      "status": "beta",
+      "description": "Presentational mobile data card with title, metadata, status, fields, and up to two explicit actions.",
+      "source": "packages/react/src/organisms/DataTable/CardTable.meta.ts",
+      "import": "import { CardTable } from '@rappi-ds/react'",
+      "relationships": [
+        "DataTable",
+        "Tag | Button | IconButton | Toggle"
+      ],
+      "keywords": [
+        "a",
+        "cardtable",
+        "comparison",
+        "displaying",
+        "essential",
+        "fields",
+        "horizontal",
+        "is",
+        "labeled",
+        "narrow",
+        "not",
+        "on",
+        "record",
+        "representing",
+        "row",
+        "screens",
+        "table",
+        "where"
+      ]
+    },
+    {
+      "name": "DataTable",
+      "category": "organism",
+      "status": "beta",
+      "description": "Responsive controlled data display that uses a native table from 768px and CardTable items below 768px.",
+      "source": "packages/react/src/organisms/DataTable/DataTable.meta.ts",
+      "import": "import { DataTable } from '@rappi-ds/react'",
+      "relationships": [
+        "TableCell",
+        "CardTable",
+        "Checkbox",
+        "Pagination"
+      ],
+      "keywords": [
+        "a",
+        "across",
+        "card",
+        "columns",
+        "compare",
+        "controlled",
+        "dataset",
+        "datatable",
+        "is",
+        "mobile",
+        "need",
+        "needs",
+        "or",
+        "pagination",
+        "records",
+        "representation",
+        "required",
+        "same",
+        "selection",
+        "several",
+        "shared",
+        "the",
+        "to",
+        "users"
+      ]
+    },
+    {
+      "name": "TableCell",
+      "category": "composite",
+      "status": "beta",
+      "description": "Native td and th wrappers with logical alignment and composable leading, text, secondary title, and trailing slots.",
+      "source": "packages/react/src/organisms/DataTable/TableCell.meta.ts",
+      "import": "import { TableCell, TableHeaderCell } from '@rappi-ds/react'",
+      "relationships": [
+        "tr → table",
+        "Checkbox | Tag | Toggle | Button | IconButton"
+      ],
+      "keywords": [
+        "a",
+        "action",
+        "an",
+        "building",
+        "cell",
+        "control",
+        "icon",
+        "inside",
+        "native",
+        "needs",
+        "or",
+        "rows",
+        "secondary",
+        "semantic",
+        "table",
+        "tablecell",
+        "title",
+        "trailing"
+      ]
+    }
+  ]
+}

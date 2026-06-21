@@ -1,0 +1,31 @@
+/*
+ * Mi Tienda theme — Figma "semantics" file, mode "Mi Tienda"
+ * Accent: #007aff (blue)
+ * Note: ink/accent (#34c85a) differs from background/accent (#007aff) in Figma.
+ */
+[data-theme='mi-tienda'] {
+  --brand-primary: #007aff;
+  --brand-primary-dark: #2c68d4;
+  --brand-primary-light: #eff6fe;
+  --brand-primary-container: #eff6fe;
+  --brand-secondary: transparent;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+  --surface-inverse: transparent;
+  --surface-overlay: rgba(0, 0, 0, 0.6);
+  --surface-overlay-weak: transparent;
+  --border-standard: #d6d9df;
+  --border-non-opaque: transparent;
+
+  --ink-accent: #34c85a;
+  --ink-positive: #34c85a;
+  --ink-error: #c43333;
+
+  --error: #c43333;
+  --info: #4d2fae;
+  --info-container: #e8e2fb;
+  --offer: transparent;
+  --offer-container: transparent;
+  --border-positive: #258e3f;
+}

@@ -1,0 +1,19 @@
+/*
+ * User App theme — Figma "semantics" file, mode "User App"
+ * Accent: #34c85a (green)
+ */
+[data-theme='user-app'] {
+  --brand-primary: #34c85a;
+  --brand-primary-dark: #34c85a;
+  --brand-primary-light: #e1f7e7;
+  --brand-primary-container: #e1f7e7;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+
+  --ink-positive: #34c85a;
+  --ink-disabled: rgba(145, 154, 170, 0.8);
+
+  --positive: #34c85a;
+  --border-positive: #34c85a;
+}

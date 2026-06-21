@@ -1,0 +1,25 @@
+/*
+ * Pay theme — Figma "semantics" file, mode "Pay"
+ * Accent: #6168db (indigo)
+ */
+[data-theme='pay'] {
+  --brand-primary: #6168db;
+  --brand-primary-dark: #6168db;
+  --brand-primary-light: #e8e9fa;
+  --brand-primary-container: #e8e9fa;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+
+  --ink-accent: #4b50a9;
+  --ink-standard: #2f343c;
+  --ink-weak: #464d59;
+  --ink-disabled: rgba(145, 154, 170, 0.8);
+  --ink-error: #c43333;
+  --ink-recommendation: #2c68d4;
+
+  --positive: #29d884;
+  --error: #c43333;
+  --info: #007aff;
+  --border-positive: #29d884;
+}

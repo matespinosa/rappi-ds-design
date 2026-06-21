@@ -1,0 +1,28 @@
+/*
+ * Portal Partners theme — Figma "semantics" file, mode "Portal Partners"
+ * Accent: #007aff (blue)
+ */
+[data-theme='portal-partners'] {
+  --brand-primary: #007aff;
+  --brand-primary-dark: #1f4e9e;
+  --brand-primary-light: #bdd8fb;
+  --brand-primary-container: #bdd8fb;
+  --brand-secondary: transparent;
+
+  --bg-accent-pressed: #133469;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+  --surface-inverse: #2f343c;
+  --surface-overlay: rgba(0, 0, 0, 0.6);
+  --surface-overlay-weak: transparent;
+
+  --ink-strong: #171a1e;
+  --ink-recommendation: #4d2fae;
+
+  --info-container: #e8e2fb;
+  --offer: transparent;
+  --offer-container: transparent;
+  --border-strong: #2f343c;
+  --border-positive: #2caa4c;
+}

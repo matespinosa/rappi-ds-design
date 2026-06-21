@@ -1,0 +1,28 @@
+/*
+ * Nexus theme — Figma "semantics" file, mode "Nexus"
+ * Accent: #1d7232 (dark green)
+ * Note: ink/accent (#165526) is a darker shade than background/accent (#1d7232).
+ */
+[data-theme='nexus'] {
+  --brand-primary: #1d7232;
+  --brand-primary-dark: #1d7232;
+  --brand-primary-light: #e1f7e7;
+  --brand-primary-container: #e1f7e7;
+  --brand-secondary: transparent;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+  --offer: transparent;
+  --offer-container: transparent;
+
+  --ink-accent: #165526;
+  --ink-positive: #2caa4c;
+  --ink-error: #c43333;
+  --ink-recommendation: #2c68d4;
+
+  --positive: #2caa4c;
+  --error: #c43333;
+  --info: #2c68d4;
+  --border-error: #c43333;
+  --border-positive: #2caa4c;
+}

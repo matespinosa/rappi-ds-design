@@ -1,0 +1,21 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "persistent": true
+    },
+    "test": {
+      "dependsOn": ["build"]
+    },
+    "storybook": {
+      "dependsOn": ["@rappi-ds/react#build", "@rappi-ds/tokens#build"],
+      "persistent": true
+    },
+    "lint": {}
+  }
+}

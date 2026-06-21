@@ -1,0 +1,31 @@
+/*
+ * Aliados theme — Figma "semantics" file, mode "Aliados"
+ * Accent: #28b2ab (teal)
+ */
+[data-theme='aliados'] {
+  --brand-primary: #28b2ab;
+  --brand-primary-dark: #16625e;
+  --brand-primary-light: #dff4f3;
+  --brand-primary-container: #dff4f3;
+  --brand-secondary: transparent;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+  --surface-inverse: transparent;
+  --surface-overlay: rgba(0, 0, 0, 0.6);
+  --surface-overlay-weak: transparent;
+  --border-standard: #d6d9df;
+  --border-non-opaque: transparent;
+
+  --ink-positive: #258e3f;
+  --ink-error: #c43333;
+  --ink-recommendation: transparent;
+
+  --positive: #258e3f;
+  --positive-container: #dff4f3;
+  --info: transparent;
+  --info-container: transparent;
+  --offer: transparent;
+  --offer-container: transparent;
+  --border-positive: #258e3f;
+}

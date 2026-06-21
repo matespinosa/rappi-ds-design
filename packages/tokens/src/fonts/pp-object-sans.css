@@ -1,0 +1,29 @@
+/*
+ * PP Object Sans — self-hosted web fonts for @rappi-ds/tokens
+ * Source of truth: DESIGN.md → fonts.base
+ * Weights used by typography tokens: 400 (Regular), 500 (Medium), 700 (Bold)
+ */
+
+@font-face {
+  font-family: 'PP Object Sans';
+  src: url('./PPObjectSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Object Sans';
+  src: url('./PPObjectSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Object Sans';
+  src: url('./PPObjectSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

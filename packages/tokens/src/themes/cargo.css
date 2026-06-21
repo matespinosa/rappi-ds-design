@@ -1,0 +1,16 @@
+/*
+ * Cargo theme — Figma "semantics" file, mode "Cargo"
+ * Accent: #ff441f (Rappi orange — same as Merchants base)
+ */
+[data-theme='cargo'] {
+  --brand-primary-light: #e1f7e7;
+  --brand-primary-container: #e1f7e7;
+
+  --surface-weak: #eceff3;
+  --surface-disabled: #eceff3;
+
+  --ink-disabled: rgba(145, 154, 170, 0.8);
+  --ink-recommendation: #4d2fae;
+
+  --info: #4d2fae;
+}
