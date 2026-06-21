@@ -89,22 +89,35 @@ export function SegmentedControl({
     const thumb = thumbRef.current
     if (!track || !thumb) return
 
-    const selected = track.querySelector<HTMLButtonElement>('[role="radio"][data-selected]')
-    if (!selected) return
+    const updateThumb = () => {
+      const selected = track.querySelector<HTMLButtonElement>('[role="radio"][data-selected]')
+      if (!selected) return
 
-    if (!isMountedRef.current) {
-      // First render — position instantly, no slide animation
-      thumb.style.transition = 'none'
-      thumb.style.left = `${selected.offsetLeft}px`
-      thumb.style.width = `${selected.offsetWidth}px`
-      // Force a reflow so the "no transition" state is committed before
-      // re-enabling transition for future changes
-      thumb.getBoundingClientRect()
-      thumb.style.transition = ''
-      isMountedRef.current = true
-    } else {
-      thumb.style.left = `${selected.offsetLeft}px`
-      thumb.style.width = `${selected.offsetWidth}px`
+      if (!isMountedRef.current) {
+        // First render — position instantly, no slide animation
+        thumb.style.transition = 'none'
+        thumb.style.left = `${selected.offsetLeft}px`
+        thumb.style.width = `${selected.offsetWidth}px`
+        // Force a reflow so the "no transition" state is committed before
+        // re-enabling transition for future changes
+        thumb.getBoundingClientRect()
+        thumb.style.transition = ''
+        isMountedRef.current = true
+      } else {
+        thumb.style.left = `${selected.offsetLeft}px`
+        thumb.style.width = `${selected.offsetWidth}px`
+      }
+    }
+
+    updateThumb()
+
+    if (typeof ResizeObserver === 'undefined') return
+
+    const resizeObserver = new ResizeObserver(updateThumb)
+    resizeObserver.observe(track)
+
+    return () => {
+      resizeObserver.disconnect()
     }
   }, [value])
 

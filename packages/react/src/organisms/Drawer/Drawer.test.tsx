@@ -46,15 +46,31 @@ describe('Drawer', () => {
     )
 
     expect(screen.getByText('Drawer content')).toBeTruthy()
+    expect(screen.getByText('Drawer content').closest('.rds-drawer__content')).toBeTruthy()
     expect(screen.getByRole('button', { name: 'Secondary' })).toBeTruthy()
     expect(screen.getByRole('button', { name: 'Primary' })).toBeTruthy()
   })
 
-  it('supports a primary-only footer and a drawer without footer', () => {
+  it('supports hiding individual footer actions or the whole footer', () => {
     const { rerender } = render(<Drawer open title="Order details" showSecondaryAction={false} />)
 
     expect(screen.queryByRole('button', { name: 'Secondary' })).toBeNull()
     expect(screen.getByRole('button', { name: 'Primary' })).toBeTruthy()
+
+    rerender(<Drawer open title="Order details" showPrimaryAction={false} />)
+    expect(screen.queryByRole('button', { name: 'Primary' })).toBeNull()
+    expect(screen.getByRole('button', { name: 'Secondary' })).toBeTruthy()
+
+    rerender(
+      <Drawer
+        open
+        title="Order details"
+        showPrimaryAction={false}
+        showSecondaryAction={false}
+      />,
+    )
+    expect(screen.queryByRole('button', { name: 'Primary' })).toBeNull()
+    expect(screen.queryByRole('button', { name: 'Secondary' })).toBeNull()
 
     rerender(<Drawer open title="Order details" showFooter={false} />)
     expect(screen.queryByRole('button', { name: 'Primary' })).toBeNull()

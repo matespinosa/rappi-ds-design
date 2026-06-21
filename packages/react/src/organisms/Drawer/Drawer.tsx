@@ -30,6 +30,8 @@ export interface DrawerProps {
   closeLabel?: string
   /** Shows the docked action region from the Figma component. */
   showFooter?: boolean
+  /** Shows the primary action in the footer. */
+  showPrimaryAction?: boolean
   /** Shows the supporting action before the primary action. */
   showSecondaryAction?: boolean
   primaryLabel?: string
@@ -82,6 +84,7 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
     onClose,
     closeLabel = 'Cerrar',
     showFooter = true,
+    showPrimaryAction = true,
     showSecondaryAction = true,
     primaryLabel = 'Primary',
     secondaryLabel = 'Secondary',
@@ -98,6 +101,8 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
   const onCloseRef = useRef(onClose)
   const titleId = `${useId()}-drawer-title`
   onCloseRef.current = onClose
+
+  const hasFooterActions = showPrimaryAction || showSecondaryAction
 
   const setPanelRef = (node: HTMLDivElement | null) => {
     ;(panelRef as MutableRefObject<HTMLDivElement | null>).current = node
@@ -206,16 +211,18 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
 
         <div className="rds-drawer__content">{children}</div>
 
-        {showFooter ? (
+        {showFooter && hasFooterActions ? (
           <footer className="rds-drawer__footer">
             {showSecondaryAction ? (
               <Button appearance="secondary" size="lg" onClick={onSecondary}>
                 {secondaryLabel}
               </Button>
             ) : null}
-            <Button appearance="primary" size="lg" onClick={onPrimary}>
-              {primaryLabel}
-            </Button>
+            {showPrimaryAction ? (
+              <Button appearance="primary" size="lg" onClick={onPrimary}>
+                {primaryLabel}
+              </Button>
+            ) : null}
           </footer>
         ) : null}
       </div>

@@ -1,12 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { TextFieldPhone, TextFieldPhoneSkeleton, type TextFieldPhoneCountry } from '@rappi-ds/react'
+import {
+  Flag,
+  TextFieldPhone,
+  TextFieldPhoneSkeleton,
+  type TextFieldPhoneCountry,
+} from '@rappi-ds/react'
 import React, { useState } from 'react'
 
 const countries: readonly TextFieldPhoneCountry[] = [
-  { code: 'CO', callingCode: '+57', name: 'Colombia', flag: '🇨🇴' },
-  { code: 'MX', callingCode: '+52', name: 'Mexico', flag: '🇲🇽' },
-  { code: 'BR', callingCode: '+55', name: 'Brazil', flag: '🇧🇷' },
-  { code: 'AR', callingCode: '+54', name: 'Argentina', flag: '🇦🇷' },
+  { code: 'CO', callingCode: '+57', name: 'Colombia', flag: <Flag country="COL" decorative /> },
+  { code: 'MX', callingCode: '+52', name: 'Mexico', flag: <Flag country="MEX" decorative /> },
+  { code: 'BR', callingCode: '+55', name: 'Brazil', flag: <Flag country="BRA" decorative /> },
+  { code: 'AR', callingCode: '+54', name: 'Argentina', flag: <Flag country="ARG" decorative /> },
 ]
 
 const meta: Meta<typeof TextFieldPhone> = {

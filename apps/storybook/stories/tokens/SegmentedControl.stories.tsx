@@ -186,6 +186,19 @@ export const MerchantDashboard: Story = {
   },
 }
 
+/* ─── Flexible content ─── */
+
+export const FlexibleContent: Story = {
+  name: 'Flexible — content-sized width',
+  render: () => (
+    <Controlled aria-label="Período largo" defaultValue="week">
+      <SegmentedOption value="today">Hoy</SegmentedOption>
+      <SegmentedOption value="week">Últimos 7 días</SegmentedOption>
+      <SegmentedOption value="month">Último mes completo</SegmentedOption>
+    </Controlled>
+  ),
+}
+
 /* ─── Full showcase ─── */
 
 export const AllVariants: Story = {

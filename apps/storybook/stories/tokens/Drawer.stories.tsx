@@ -7,9 +7,13 @@ const sizes: DrawerSize[] = ['sm', 'md', 'lg']
 function DrawerExample({
   size = 'sm',
   showFooter = true,
+  showPrimaryAction = true,
+  showSecondaryAction = true,
 }: {
   size?: DrawerSize
   showFooter?: boolean
+  showPrimaryAction?: boolean
+  showSecondaryAction?: boolean
 }) {
   const [open, setOpen] = useState(false)
 
@@ -21,12 +25,14 @@ function DrawerExample({
         title="Titulo"
         size={size}
         showFooter={showFooter}
+        showPrimaryAction={showPrimaryAction}
+        showSecondaryAction={showSecondaryAction}
         primaryLabel="Primary"
         secondaryLabel="Secondary"
         onClose={() => setOpen(false)}
         onSecondary={() => setOpen(false)}
       >
-        <div style={{ padding: 'var(--spacing-24)' }}>Add task-specific content here.</div>
+        <div>Add task-specific content here.</div>
       </Drawer>
     </>
   )
@@ -39,6 +45,7 @@ const meta: Meta<typeof Drawer> = {
   argTypes: {
     size: { control: 'select', options: sizes },
     showFooter: { control: 'boolean' },
+    showPrimaryAction: { control: 'boolean' },
     showSecondaryAction: { control: 'boolean' },
   },
 }
@@ -48,10 +55,19 @@ export default meta
 type Story = StoryObj<typeof Drawer>
 
 export const Playground: Story = {
-  render: (args) => <DrawerExample size={args.size} showFooter={args.showFooter} />,
+  render: (args) => (
+    <DrawerExample
+      size={args.size}
+      showFooter={args.showFooter}
+      showPrimaryAction={args.showPrimaryAction}
+      showSecondaryAction={args.showSecondaryAction}
+    />
+  ),
   args: {
     size: 'sm',
     showFooter: true,
+    showPrimaryAction: true,
+    showSecondaryAction: true,
   },
 }
 
@@ -61,6 +77,14 @@ export const Medium: Story = {
 
 export const Large: Story = {
   render: () => <DrawerExample size="lg" />,
+}
+
+export const PrimaryOnly: Story = {
+  render: () => <DrawerExample showSecondaryAction={false} />,
+}
+
+export const SecondaryOnly: Story = {
+  render: () => <DrawerExample showPrimaryAction={false} />,
 }
 
 export const WithoutFooter: Story = {

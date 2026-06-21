@@ -313,6 +313,10 @@
   --text-field-phone-chevron-size: 12px;
   --text-field-phone-clear-size: 24px;
 
+  /* ─── Flag ─── */
+  --flag-size: var(--spacing-32);
+  --flag-radius: 4px;
+
   /* ─── Pin input ─── */
   --pin-input-cell-size-4: 60px;
   --pin-input-cell-size-6: 40px;
@@ -538,6 +542,7 @@
   --drawer-width-lg: 640px;
   --drawer-header-padding: var(--spacing-24);
   --drawer-header-gap: var(--spacing-16);
+  --drawer-content-padding: var(--drawer-header-padding);
   --drawer-footer-padding-sm: var(--spacing-16) var(--spacing-24);
   --drawer-footer-padding-md: var(--spacing-20) var(--spacing-24);
   --drawer-footer-gap-sm: var(--spacing-8);
