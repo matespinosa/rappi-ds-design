@@ -457,6 +457,7 @@
   min-height: 0;
   flex: 1 1 auto;
   overflow-y: auto;
+  padding: var(--drawer-content-padding);
   background-color: var(--surface);
 }
 
@@ -1471,7 +1472,7 @@
   box-sizing: border-box;
   align-items: flex-start;
   gap: var(--accordion-header-gap);
-  padding: var(--accordion-padding);
+  padding: var(--spacing-12) var(--accordion-padding);
 
   appearance: none;
   background: none;
@@ -1603,7 +1604,11 @@
 
 .rds-accordion__content {
   overflow: hidden;
-  padding: 0 var(--accordion-padding) var(--accordion-padding);
+  padding: 0 var(--accordion-padding);
+}
+
+.rds-accordion[data-open] .rds-accordion__content {
+  padding-block: var(--spacing-12);
 }
 
 /* ── Reduced motion ── */
@@ -2695,15 +2700,41 @@
   justify-content: center;
   flex: none;
   overflow: hidden;
-  border-radius: var(--radius-full);
+  border-radius: var(--flag-radius);
   font-size: var(--text-field-phone-flag-size);
   line-height: 1;
 }
 
 .rds-text-field-phone__flag > img,
-.rds-text-field-phone__flag > svg {
+.rds-text-field-phone__flag > svg,
+.rds-text-field-phone__flag > .rds-flag {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.rds-text-field-phone__flag > .rds-flag {
+  border-radius: inherit;
+}
+
+/* ─── Flag ─── */
+
+.rds-flag {
+  display: inline-flex;
+  width: var(--flag-size);
+  height: var(--flag-size);
+  flex: none;
+  overflow: hidden;
+  border-radius: var(--flag-radius);
+  vertical-align: middle;
+}
+
+.rds-flag__image {
+  display: block;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  margin: -1px;
+  max-width: none;
   object-fit: cover;
 }
 
@@ -4151,9 +4182,11 @@
 /* ── Track (container) ── */
 .rds-segmented-control {
   display: inline-flex;
-  align-items: center;
+  align-items: stretch;
   position: relative; /* anchor for the sliding thumb */
-  height: 32px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 32px;
   padding: var(--spacing-2);
   background-color: var(--surface-mild-hover); /* #eceff3 — Figma: background/weak */
   border-radius: var(--radius-full);
@@ -4166,7 +4199,7 @@
 .rds-segmented-control__thumb {
   position: absolute;
   top: var(--spacing-2);
-  height: calc(100% - 4px); /* 32px - 2×2px track padding */
+  bottom: var(--spacing-2);
   background-color: var(--surface); /* #ffffff */
   border-radius: var(--radius-full);
   box-shadow:
@@ -4186,12 +4219,10 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-4);
-  flex: 1 0 0;
-  min-width: 0;
+  flex: 0 0 auto;
   position: relative; /* above the thumb */
   z-index: 1;
-  height: 28px; /* 32px - 2×2px track padding */
-  min-height: 24px;
+  min-height: 28px; /* 32px - 2×2px track padding */
   padding: var(--spacing-6) var(--spacing-8);
   border: none;
   border-radius: var(--radius-full);
@@ -4202,7 +4233,6 @@
   line-height: var(--line-height-caption);
   font-weight: var(--font-weight-body-md); /* 400 — Regular */
   color: var(--ink-standard);
-  white-space: nowrap;
   text-align: center;
   transition:
     color 180ms ease,
@@ -4228,14 +4258,17 @@
   box-shadow: inset 0 0 0 2px var(--border-focus);
 }
 
+/* ── Label slot ── */
+.rds-segmented-option__label {
+  flex: 0 1 auto;
+}
+
 /* ── Icon slot ── */
 .rds-segmented-option__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 14px;
-  height: 14px;
 }
 
 /* ── Reduced motion ── */
@@ -5162,6 +5195,21 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.rds-card-table[data-layout='two-columns'] .rds-card-table__field:nth-child(even) {
+  align-items: flex-end;
+  text-align: end;
+}
+
+.rds-card-table[data-layout='two-columns']
+  .rds-card-table__field:nth-child(even)
+  .rds-card-table__label,
+.rds-card-table[data-layout='two-columns']
+  .rds-card-table__field:nth-child(even)
+  .rds-card-table__value {
+  justify-content: flex-end;
+  text-align: end;
+}
+
 .rds-card-table[data-layout='stacked'] .rds-card-table__fields {
   grid-template-columns: minmax(0, 1fr);
 }
@@ -5169,14 +5217,18 @@
 .rds-card-table__field {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--card-table-field-text-gap);
+  width: 100%;
   min-width: 0;
+  text-align: start;
 }
 
 .rds-card-table__label,
 .rds-card-table__value {
   margin: 0;
   overflow-wrap: anywhere;
+  text-align: start;
 }
 
 .rds-card-table__label {
@@ -5186,6 +5238,10 @@
 }
 
 .rds-card-table__value {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
   color: var(--card-table-value-color);
   font-size: var(--card-table-value-size);
   line-height: var(--card-table-value-line-height);

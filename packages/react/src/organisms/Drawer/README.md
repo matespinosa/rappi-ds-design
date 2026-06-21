@@ -70,7 +70,7 @@ Nested modal drawers or permanent navigation.
 
 ## API
 
-`open`, `title`, `size`, `onClose`, footer visibility, action labels and handlers, and `closeOnScrimClick`.
+`open`, `title`, `size`, `onClose`, `showFooter`, `showPrimaryAction`, `showSecondaryAction`, action labels and handlers, and `closeOnScrimClick`.
 
 ## Tokens
 

@@ -14,6 +14,7 @@ export {
   type BadgeNumberProps,
   type BadgeNumberSize,
 } from './primitives/BadgeNumber'
+export { Flag, type FlagCountry, type FlagProps } from './primitives/Flag'
 export { BadgeLive, type BadgeLiveProps, type BadgeLiveStatus } from './primitives/BadgeLive'
 export { Accordion, type AccordionProps } from './primitives/Accordion'
 export {
