@@ -6,7 +6,7 @@
     "dev": "turbo run dev --parallel",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "storybook": "pnpm --filter=storybook storybook",
+    "storybook": "pnpm --filter=@rappi-ds/storybook storybook",
     "design:lint": "design.md lint DESIGN.md",
     "design:export": "design.md export --format css-tailwind DESIGN.md",
     "design:diff": "design.md diff",
