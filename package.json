@@ -7,6 +7,7 @@
     "test": "turbo run test",
     "lint": "turbo run lint",
     "storybook": "pnpm --filter=@rappi-ds/storybook storybook",
+    "build:storybook": "turbo run build-storybook",
     "design:lint": "design.md lint DESIGN.md",
     "design:export": "design.md export --format css-tailwind DESIGN.md",
     "design:diff": "design.md diff",

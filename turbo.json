@@ -16,6 +16,10 @@
       "dependsOn": ["@rappi-ds/react#build", "@rappi-ds/tokens#build"],
       "persistent": true
     },
+    "build-storybook": {
+      "dependsOn": ["^build"],
+      "outputs": ["storybook-static/**"]
+    },
     "lint": {}
   }
 }
